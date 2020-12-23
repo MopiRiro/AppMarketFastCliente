@@ -19,4 +19,9 @@ public class DatosUsuarioActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AsignarContrasenaActivity.class);
         startActivity(intent);
     }
+
+    public void MenuPrincipal(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }
