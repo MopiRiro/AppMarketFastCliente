@@ -4,83 +4,124 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/accent"
     tools:context=".Activities.LoginActivity">
+
 
     <ImageView
         android:id="@+id/loginlogo"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:layout_marginTop="140dp"
-        android:src="@drawable/logosplash2"
+        android:layout_marginTop="48dp"
         android:outlineAmbientShadowColor="@color/accent"
+        android:src="@drawable/logosplash"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.596"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+    android:id="@+id/textView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="30dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="30dp"
+    android:fontFamily="@font/amaranth"
+    android:text="¡BIENVENIDO!"
+    android:textAlignment="center"
+    android:textColor="@color/white"
+    android:textSize="40sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/loginlogo" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        android:text="Te enviaremos un SMS que incluye un código de verificación para confirmar tu cuenta"
-        android:textAllCaps="true"
-        android:textColor="#A6A4A4"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/amaranth"
+        android:text="MarketFast más cerca a tí"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginlogo"
-        app:layout_constraintVertical_bias="0.152" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tiNumeroCelular"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        app:counterMaxLength="9"
-        app:counterEnabled="true"
-        app:boxBackgroundMode="outline"
-        android:backgroundTint="@color/accent"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.106">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etNumeroCelular"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ingrese su número de celular"
-            android:inputType="number"
-            android:textColor="@color/white"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <Button
-        android:id="@+id/btnEnviarCodigo"
+    android:id="@+id/btnIngresarCorreo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="30dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginEnd="30dp"
+    android:elevation="4dp"
+    android:background="@drawable/button_rounded_inicio"
+    android:onClick="CodigoVerificacion"
+    android:text="Ingresar con Gmail"
+    android:textColor="@color/accent"
+    android:textSize="15sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+    <Button
+        android:id="@+id/btnIngresarNumero"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/button_rounded_orangemarket"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:elevation="4dp"
+        android:background="@drawable/button_rounded_inicio"
         android:onClick="CodigoVerificacion"
-        android:text="Enviar código"
-        android:textColor="#FFFFFF"
+        android:text="Ingresar con número de celular"
+        android:textColor="@color/accent"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tiNumeroCelular" />
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresarCorreo" />
 
+    <TextView
+        android:id="@+id/tvO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/amaranth"
+        android:text="O"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresarNumero" />
+
+    <Button
+        android:id="@+id/btnVerCatalogo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:elevation="4dp"
+        android:background="@drawable/button_rounder_border"
+        android:onClick="CodigoVerificacion"
+        android:text="Ver catalogo"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvO" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

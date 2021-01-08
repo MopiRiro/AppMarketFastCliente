@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/accent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".Activities.DatosUsuarioActivity">
 
@@ -12,43 +12,145 @@
         android:id="@+id/tvBienvenidaMarketFast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="248dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="@font/carter_one"
         android:gravity="center"
-        android:text="¡ Bienvenido a MarketFast !"
-        android:textColor="@color/white"
-        android:textSize="50sp"
+        android:text="¡Bienvenido a MarketFast!"
+        android:textAlignment="center"
+        android:textColor="@color/accent"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvCompletaEstosDatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/carter_one"
+        android:gravity="center"
+        android:text="Complete sus datos"
+        android:textColor="@color/grey"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBienvenidaMarketFast" />
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtNombreUsuario"
+        android:id="@+id/tvNombres"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/accent"
+        app:startIconDrawable="@drawable/ic_user"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCompletaEstosDatos">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombres"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvApellidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        app:startIconDrawable="@drawable/ic_user"
         android:backgroundTint="@color/accent"
         app:boxBackgroundMode="outline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvBienvenidaMarketFast">
+        app:layout_constraintTop_toBottomOf="@+id/tvNombres">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ingrese su nombre para continuar"
-            android:backgroundTint="@color/white"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:fontFamily="@font/carter_one"
-            android:inputType="text"
-            android:textColor="@color/white" />
+            android:hint="Apellidos"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/accent"
+        app:boxBackgroundMode="outline"
+        app:startIconDrawable="@drawable/ic_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvApellidos">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo"
+            android:inputType="textEmailAddress"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <CheckBox
+        android:id="@+id/cbTerminosCondiciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="40dp"
+        android:checked="true"
+        android:text="Acepto terminos, condiciones y politicas de privacidad"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCorreo" />
+
+    <CheckBox
+        android:id="@+id/cbPublicidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:checked="true"
+        android:text="Acepto recibir notificaciones de Marketfast, con sus promociones y descuentos"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbTerminosCondiciones" />
+
+
+    <!---<com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:checked="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCorreo" /> -->
+
+
 
     <Button
         android:id="@+id/button2"
@@ -56,17 +158,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginEnd="80dp"
-        android:background="@drawable/button_rounded_white"
+        android:layout_marginBottom="132dp"
+        android:background="@drawable/button_rounded_orangemarket"
         android:onClick="MenuPrincipal"
-        android:text="INICIAR"
-        android:textColor="@color/accent"
+        android:text="CONTINUAR"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreUsuario"
-        app:layout_constraintVertical_bias="0.159" />
+        app:layout_constraintTop_toBottomOf="@+id/cbPublicidad" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

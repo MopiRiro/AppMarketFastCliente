@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.AsignarContrasenaActivity"></activity>
+        <activity android:name=".Activities.CatalogoActivity"></activity>
+        <activity android:name=".Activities.PruebasActivity"></activity>
+        <activity android:name=".Activities.AutenticacionNumeroActivity" />
+        <activity android:name=".Activities.AsignarContrasenaActivity" />
         <activity android:name=".Activities.DatosUsuarioActivity" />
         <activity android:name=".Activities.CodigoVerificacionActivity" />
         <activity android:name=".Activities.LoginActivity" />
