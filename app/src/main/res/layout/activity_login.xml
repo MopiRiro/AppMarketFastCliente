@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/accent"
+    android:onClick="CodigoVerificacion"
     tools:context=".Activities.LoginActivity">
 
 
@@ -12,7 +13,7 @@
         android:id="@+id/loginlogo"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="35dp"
         android:outlineAmbientShadowColor="@color/accent"
         android:src="@drawable/logosplash"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,20 +22,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-    android:id="@+id/textView1"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="30dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginEnd="30dp"
-    android:fontFamily="@font/amaranth"
-    android:text="¡BIENVENIDO!"
-    android:textAlignment="center"
-    android:textColor="@color/white"
-    android:textSize="40sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/loginlogo" />
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/amaranth"
+        android:text="¡BIENVENIDO!"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginlogo" />
 
     <TextView
         android:id="@+id/textView2"
@@ -53,22 +54,22 @@
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <Button
-    android:id="@+id/btnIngresarCorreo"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="30dp"
-    android:layout_marginTop="30dp"
-    android:layout_marginEnd="30dp"
-    android:elevation="4dp"
-    android:background="@drawable/button_rounded_inicio"
-    android:onClick="CodigoVerificacion"
-    android:text="Ingresar con Gmail"
-    android:textColor="@color/accent"
-    android:textSize="15sp"
-    android:textStyle="bold"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:id="@+id/btnIngresarGmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/button_rounded_inicio"
+        android:elevation="4dp"
+        android:onClick="IngresoCorreo"
+        android:text="Ingresar con Gmail"
+        android:textColor="@color/accent"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
     <Button
@@ -78,16 +79,16 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        android:elevation="4dp"
         android:background="@drawable/button_rounded_inicio"
-        android:onClick="CodigoVerificacion"
+        android:elevation="4dp"
+        android:onClick="AutenticacionNumero"
         android:text="Ingresar con número de celular"
         android:textColor="@color/accent"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIngresarCorreo" />
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresarGmail"/>
 
     <TextView
         android:id="@+id/tvO"
@@ -112,9 +113,9 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        android:elevation="4dp"
         android:background="@drawable/button_rounder_border"
-        android:onClick="CodigoVerificacion"
+        android:elevation="4dp"
+        android:onClick="IngresoCatalogo"
         android:text="Ver catalogo"
         android:textColor="@color/white"
         android:textSize="15sp"
@@ -122,6 +123,41 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvO" />
+
+    <Button
+        android:id="@+id/btnRegistrate"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="150dp"
+        android:text="Registrate"
+        android:onClick="Registrarse"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerCatalogo"
+        />
+
+    <Button
+        android:id="@+id/btnIniciarSesionCorreo"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="¿Ya tienes cuenta? Inicia Sesión"
+        android:onClick="Registrarse"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrate"
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

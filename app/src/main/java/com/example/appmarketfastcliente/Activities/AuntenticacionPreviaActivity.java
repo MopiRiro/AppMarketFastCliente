@@ -8,15 +8,16 @@ import android.view.View;
 
 import com.example.appmarketfastcliente.R;
 
-public class AsignarContrasenaActivity extends AppCompatActivity {
+public class AuntenticacionPreviaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_asignar_contrasena);
+        setContentView(R.layout.activity_auntenticacion_previa);
     }
-    public void RegistroCliente(View view){
-        Intent intent = new Intent(this, RegistroClienteActivity.class);
+
+    public void IngresoLogin(View view){
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 }
