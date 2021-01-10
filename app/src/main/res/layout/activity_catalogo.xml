@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-<androidx.constraintlayout.widget.ConstraintLayout
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
@@ -29,247 +24,259 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <GridLayout
-        android:id="@+id/gridLayout"
+    <ScrollView
+        android:id="@+id/svCatProductos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:columnCount="2"
-        android:rowCount="3"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMarketFast"
-        app:layout_constraintVertical_bias="0.19">
+        app:layout_constraintTop_toBottomOf="@+id/tvMarketFast">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvCatAbarrotes"
+        <GridLayout
+            android:id="@+id/gridLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="10dp"
-            android:foreground="?selectableItemBackground"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="10dp"
-            app:layout_columnWeight="1">
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:columnCount="2"
+            android:rowCount="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMarketFast"
+            app:layout_constraintVertical_bias="0.19">
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvCatAbarrotes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:background="#ffff"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_rowWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp"
+                app:layout_columnWeight="1">
 
-                <ImageView
-                    android:layout_width="119dp"
-                    android:layout_height="157dp"
-                    android:src="@drawable/productos" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ABARROTES"
-                    android:textAlignment="center"
-                    android:textColor="#000"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="#ffff"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvCatPerecibles"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="10dp"
-            android:foreground="?selectableItemBackground"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="10dp"
-            app:layout_columnWeight="1">
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="157dp"
+                        android:src="@drawable/productos" />
 
-            <LinearLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ABARROTES"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvCatPerecibles"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:background="#ffff"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_rowWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp"
+                app:layout_columnWeight="1">
 
-                <ImageView
-                    android:layout_width="119dp"
-                    android:layout_height="157dp"
-                    android:src="@drawable/perecibles" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PERECIBLES"
-                    android:textAlignment="center"
-                    android:textColor="#000"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvCatCuidadoPersonal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="10dp"
-            android:foreground="?selectableItemBackground"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="10dp"
-            app:layout_columnWeight="1">
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="#ffff"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-            <LinearLayout
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="157dp"
+                        android:src="@drawable/perecibles" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PERECIBLES"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvCatHigiene"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:background="#ffff"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_rowWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp"
+                app:layout_columnWeight="1">
 
-                <ImageView
-                    android:layout_width="119dp"
-                    android:layout_height="157dp"
-                    android:src="@drawable/marcas" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CUIDADO PERSONAL"
-                    android:textAlignment="center"
-                    android:textColor="#000"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvCatBebidas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="10dp"
-            android:foreground="?selectableItemBackground"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="10dp"
-            app:layout_columnWeight="1">
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="#ffff"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-            <LinearLayout
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="157dp"
+                        android:src="@drawable/cuidadopersonal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HIGIENE"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvCatBebidas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:background="#ffff"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_rowWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp"
+                app:layout_columnWeight="1">
 
-                <ImageView
-                    android:layout_width="119dp"
-                    android:layout_height="157dp"
-                    android:src="@drawable/bebidas" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="BEBIDAS"
-                    android:textAlignment="center"
-                    android:textColor="#000"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvCatLimpieza"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="10dp"
-            android:foreground="?selectableItemBackground"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="10dp"
-            app:layout_columnWeight="1">
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="#ffff"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-            <LinearLayout
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="157dp"
+                        android:src="@drawable/bebidas" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BEBIDAS"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvCatLimpieza"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:background="#ffff"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_rowWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp"
+                app:layout_columnWeight="1">
 
-                <ImageView
-                    android:layout_width="119dp"
-                    android:layout_height="157dp"
-                    android:src="@drawable/limpieza" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="LIMPIEZA"
-                    android:textAlignment="center"
-                    android:textColor="#000"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvCatMascotas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="10dp"
-            android:foreground="?selectableItemBackground"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="10dp"
-            app:layout_columnWeight="1">
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="#ffff"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-            <LinearLayout
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="157dp"
+                        android:src="@drawable/limpieza" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LIMPIEZA"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvCatMascotas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:background="#ffff"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_rowWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp"
+                app:layout_columnWeight="1">
 
-                <ImageView
-                    android:layout_width="119dp"
-                    android:layout_height="157dp"
-                    android:src="@drawable/mascotas" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="MACOTAS"
-                    android:textAlignment="center"
-                    android:textColor="#000"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-    </GridLayout>
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="#ffff"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="119dp"
+                        android:layout_height="157dp"
+                        android:src="@drawable/mascotas" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MACOTAS"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+    </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fbUbicacion"
+        android:id="@+id/fbWsp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="15dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="550dp"
         android:src="@drawable/wsp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
-        app:layout_constraintVertical_bias="0.406" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
