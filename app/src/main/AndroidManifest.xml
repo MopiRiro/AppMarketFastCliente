@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.RegistroClienteActivity"></activity>
+        <activity android:name=".Activities.RecuperarContrasenaActivity"></activity>
+        <activity android:name=".Activities.ListarOfertasActivity" />
+        <activity android:name=".Activities.ListarCategoriasActivity" />
+        <activity android:name=".Activities.ListarMarcasActivity" />
+        <activity android:name=".Activities.ListarProductosActivity" />
+        <activity android:name=".Activities.RegistroClienteActivity" />
         <activity android:name=".Activities.AuntenticacionPreviaActivity" />
         <activity android:name=".Activities.CatalogoActivity" />
         <activity android:name=".Activities.PruebasActivity" />
